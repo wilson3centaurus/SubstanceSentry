@@ -7,7 +7,7 @@ const InformationScreen_Signs = () => {
     <View style={styles.container}>
       <View style={styles.banner}>
         <Image
-          source={require("./images/Sierra_960_5dd659bfa2f7821d69fc15de08717289.jpg")}
+          source={require("./images/signs.png")}
           style={styles.bannerImage}
         />
         <Text style={styles.appName}>Drug Abuse Signs</Text>
@@ -21,8 +21,24 @@ const InformationScreen_Signs = () => {
             Drug abuse can be difficult to detect, but there are often warning
             signs. These signs may vary depending on the specific drug and the
             severity of the addiction. {"\n"}
-            {"\n"}Here are 10 common signs to look for:{"\n"}
+            {"\n"}Here are 10 common signs to look for:
           </Text>
+
+          <View style={styles.signItem}>
+            <MaterialCommunityIcons
+              name="sentiment-down"
+              size={30}
+              color="#F1C40F"
+            />
+            <Text style={styles.signText}>Depression</Text>
+            <View style={styles.signDescriptionContainer}>
+              <Text style={styles.signDescription}>
+                Drug abuse can contribute to feelings of hopelessness, sadness,
+                and loss of interest in activities, which are symptoms of
+                depression.{"\n"}
+              </Text>
+            </View>
+          </View>
 
           <View style={styles.signItem}>
             <MaterialCommunityIcons name="scale" size={30} color="#F1C40F" />
@@ -30,7 +46,7 @@ const InformationScreen_Signs = () => {
             <View style={styles.signDescriptionContainer}>
               <Text style={styles.signDescription}>
                 Changes in appetite due to drug use can lead to significant
-                weight fluctuations.
+                weight fluctuations.{"\n"}
               </Text>
             </View>
           </View>
@@ -82,7 +98,7 @@ const InformationScreen_Signs = () => {
             </Text>
             <Text style={styles.signDescription}>
               Declining grades, absenteeism, or problems at work can be
-              indicators of drug abuse affecting focus and responsibility.
+              indicators of drug abuse affecting focus and responsibility.{"\n"}
             </Text>
           </View>
 
@@ -96,7 +112,7 @@ const InformationScreen_Signs = () => {
             <View style={styles.signDescriptionContainer}>
               <Text style={styles.signDescription}>
                 Significant changes in appetite, either loss or gain, can be a
-                sign of drug use.
+                sign of drug use.{"\n"}
               </Text>
             </View>
           </View>
@@ -107,7 +123,7 @@ const InformationScreen_Signs = () => {
             <View style={styles.signDescriptionContainer}>
               <Text style={styles.signDescription}>
                 The person may become secretive about their whereabouts,
-                possessions, or finances to hide drug use.
+                possessions, or finances to hide drug use.{"\n"}
               </Text>
             </View>
           </View>
@@ -122,20 +138,7 @@ const InformationScreen_Signs = () => {
             <View style={styles.signDescriptionContainer}>
               <Text style={styles.signDescription}>
                 Isolation from friends, family, and activities they used to
-                enjoy can be a sign.
-              </Text>
-            </View>
-          </View>
-
-          {/* Add more sign items here */}
-
-          <View style={styles.signItem}>
-            <MaterialCommunityIcons name="scale" size={30} color="#F1C40F" />
-            <Text style={styles.signText}>Rapid Weight Loss or Gain</Text>
-            <View style={styles.signDescriptionContainer}>
-              <Text style={styles.signDescription}>
-                Changes in appetite due to drug use can lead to significant
-                weight fluctuations.
+                enjoy can be a sign.{"\n"}
               </Text>
             </View>
           </View>
@@ -146,7 +149,7 @@ const InformationScreen_Signs = () => {
             <View style={styles.signDescriptionContainer}>
               <Text style={styles.signDescription}>
                 Drugs can impair motor skills and reaction time, leading to
-                clumsiness or stumbling.
+                clumsiness or stumbling.{"\n"}
               </Text>
             </View>
           </View>
@@ -187,19 +190,20 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     position: "absolute",
-    top: "20%",
-    left: "10%",
+    top: "40%",
+    left: "4%",
   },
   bannerText: {
     fontSize: 18,
     color: "#fff",
     position: "absolute",
-    top: "40%",
-    left: "10%",
+    top: "65%",
+    left: "4%",
   },
   signsInfo: {
     flex: 1,
     padding: 20,
+    backgroundColor: "#CEE5E7",
   },
   header: {
     fontSize: 22,
@@ -226,9 +230,9 @@ const styles = StyleSheet.create({
   },
   signDescription: {
     fontSize: 16,
-    lineHeight: 25,
-    marginLeft: 10,
-    textAlign: "justify",
+    lineHeight: 22,
+    marginLeft: 30,
+    textAlign: "left",
   },
 });
 

@@ -174,12 +174,11 @@ const styles = StyleSheet.create({
     fontSize: 17,
     marginLeft: 20,
     textAlign: "center",
-    
   },
   drugsInfo: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#F8F6FE",
+    backgroundColor: "#CEE5E7",
   },
   header: {
     fontSize: 22,

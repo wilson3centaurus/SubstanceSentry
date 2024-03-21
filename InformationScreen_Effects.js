@@ -181,6 +181,7 @@ const styles = StyleSheet.create({
   drugsInfo: {
     flex: 1,
     padding: 20,
+    backgroundColor: "#CEE5E7",
   },
   header: {
     fontSize: 22,
