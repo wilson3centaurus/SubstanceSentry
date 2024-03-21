@@ -25,6 +25,17 @@ const InformationScreen_Signs = () => {
           </Text>
 
           <View style={styles.signItem}>
+            <MaterialCommunityIcons name="scale" size={30} color="#F1C40F" />
+            <Text style={styles.signText}>Rapid Weight Loss or Gain</Text>
+            <View style={styles.signDescriptionContainer}>
+              <Text style={styles.signDescription}>
+                Changes in appetite due to drug use can lead to significant
+                weight fluctuations.
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.signItem}>
             <MaterialCommunityIcons name="needle" size={30} color="#FF9900" />
             <Text style={styles.signText}>Changes in Possessions</Text>
             <Text style={styles.signDescription}>
@@ -73,6 +84,71 @@ const InformationScreen_Signs = () => {
               Declining grades, absenteeism, or problems at work can be
               indicators of drug abuse affecting focus and responsibility.
             </Text>
+          </View>
+
+          <View style={styles.signItem}>
+            <MaterialCommunityIcons
+              name="silverware-fork-knife"
+              size={30}
+              color="#FF9900"
+            />
+            <Text style={styles.signText}>Changes in Appetite</Text>
+            <View style={styles.signDescriptionContainer}>
+              <Text style={styles.signDescription}>
+                Significant changes in appetite, either loss or gain, can be a
+                sign of drug use.
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.signItem}>
+            <MaterialCommunityIcons name="lock" size={30} color="#9C27B0" />
+            <Text style={styles.signText}>Secrecy and Deception</Text>
+            <View style={styles.signDescriptionContainer}>
+              <Text style={styles.signDescription}>
+                The person may become secretive about their whereabouts,
+                possessions, or finances to hide drug use.
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.signItem}>
+            <MaterialCommunityIcons
+              name="account-outline"
+              size={30}
+              color="#2ECC71"
+            />
+            <Text style={styles.signText}>Social Withdrawal</Text>
+            <View style={styles.signDescriptionContainer}>
+              <Text style={styles.signDescription}>
+                Isolation from friends, family, and activities they used to
+                enjoy can be a sign.
+              </Text>
+            </View>
+          </View>
+
+          {/* Add more sign items here */}
+
+          <View style={styles.signItem}>
+            <MaterialCommunityIcons name="scale" size={30} color="#F1C40F" />
+            <Text style={styles.signText}>Rapid Weight Loss or Gain</Text>
+            <View style={styles.signDescriptionContainer}>
+              <Text style={styles.signDescription}>
+                Changes in appetite due to drug use can lead to significant
+                weight fluctuations.
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.signItem}>
+            <MaterialCommunityIcons name="run" size={30} color="#3498DB" />
+            <Text style={styles.signText}>Poor Coordination</Text>
+            <View style={styles.signDescriptionContainer}>
+              <Text style={styles.signDescription}>
+                Drugs can impair motor skills and reaction time, leading to
+                clumsiness or stumbling.
+              </Text>
+            </View>
           </View>
 
           <Text style={styles.header}>Get Help If You Need It</Text>
