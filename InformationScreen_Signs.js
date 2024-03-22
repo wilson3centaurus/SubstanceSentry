@@ -26,9 +26,9 @@ const InformationScreen_Signs = () => {
 
           <View style={styles.signItem}>
             <MaterialCommunityIcons
-              name="sentiment-down"
+              name="emoticon-sad"
               size={30}
-              color="#F1C40F"
+              color="#E44C68"
             />
             <Text style={styles.signText}>Depression</Text>
             <View style={styles.signDescriptionContainer}>
