@@ -44,8 +44,7 @@ const Prevention = () => {
       icon: "account-heart",
       backgroundColor: "#CEE5E7",
       onPress: () => {
-        // Handle click on "Find Inspiration in Recovery Stories" card
-        console.log("Finding inspiration in recovery stories...");
+        navigation.navigate("RecoveryStories");
       },
     },
   ];

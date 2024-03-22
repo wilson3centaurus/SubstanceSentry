@@ -18,7 +18,7 @@ import Emergency from "./Emergency";
 import ConnectAndThrive from "./ConnectAndThrive";
 import ManageStressWisely from "./ManageStressWisely";
 import LearnAndEmpower from "./LearnAndEmpower";
-
+import RecoveryStories from "./RecoveryStories";
 
 const Stack = createStackNavigator();
 
@@ -45,6 +45,7 @@ export default function App() {
         <Stack.Screen name="Prevention" component={Prevention} />
         <Stack.Screen name="ConnectAndThrive" component={ConnectAndThrive} />
         <Stack.Screen name="LearnAndEmpower" component={LearnAndEmpower} />
+        <Stack.Screen name="RecoveryStories" component={RecoveryStories} />
         <Stack.Screen
           name="ManageStressWisely"
           component={ManageStressWisely}

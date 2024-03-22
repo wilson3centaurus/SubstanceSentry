@@ -1,0 +1,113 @@
+import React, { useState } from "react";
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
+
+const storiesData = [
+  {
+    id: 1,
+    title: "From Rock Bottom to Mountain Climber: John's Journey",
+    imageUrl: require("./images/recovery-story-1.jpg"),
+    description:
+      "John shares how he overcame addiction and discovered a passion for mountain climbing, finding strength and peace in nature.",
+  },
+  {
+    id: 2,
+    title: "Finding Hope Through Art: Sarah's Story",
+    imageUrl: require("./images/recovery-story-2.jpg"),
+    description:
+      "Sarah details her journey of recovery through artistic expression, rediscovering her creativity and finding a healthy outlet.",
+  },
+  // Add more stories as needed
+];
+
+const RecoveryStories = () => {
+  const [currentStory, setCurrentStory] = useState(null);
+
+  const handleStoryPress = (story) => {
+    setCurrentStory(story);
+  };
+
+  return (
+    <ScrollView style={styles.container}>
+      <View style={styles.heroSection}>
+        {/* Replace with a carousel component for multiple images */}
+        <Image source={require("./images/recovery-carousel.jpg")} style={styles.heroImage} />
+        <Text style={styles.heroTitle}>Find Your Light: Real People, Real Recovery Stories</Text>
+      </View>
+      <View style={styles.storyWall}>
+        {storiesData.map((story) => (
+          <TouchableOpacity key={story.id} style={styles.storyItem} onPress={() => handleStoryPress(story)}>
+            <Image source={story.imageUrl} style={styles.storyImage} />
+            <View style={styles.storyInfo}>
+              <Text style={styles.storyTitle}>{story.title}</Text>
+              <Text style={styles.storyTeaser}>{story.description.substring(0, 60) + "..."}</Text>
+            </View>
+          </TouchableOpacity>
+        ))}
+      </View>
+      {currentStory && (
+        <View style={styles.fullStory}>
+          {/* Display full story content here (text, images, etc.) based on currentStory */}
+          <Text>You've selected: {currentStory.title}</Text>
+          <Text>{currentStory.description}</Text>
+          {/* Add a button to close the full story view if needed */}
+        </View>
+      )}
+    </ScrollView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+  },
+  heroSection: {
+    marginBottom: 20,
+  },
+  heroImage: {
+    width: "100%",
+    height: 200,
+    borderRadius: 10,
+  },
+  heroTitle: {
+    fontSize: 24,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginTop: 10,
+  },
+  storyWall: {
+    marginBottom: 40,
+  },
+  storyItem: {
+    flexDirection: "row",
+    marginBottom: 20,
+    borderRadius: 10,
+    backgroundColor: "#f5f5f5",
+    padding: 10,
+  },
+  storyImage: {
+    width: 80,
+    height: 80,
+    marginRight: 10,
+    borderRadius: 5,
+  },
+  storyInfo: {
+    flex: 1,
+  },
+  storyTitle: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginBottom: 5,
+  },
+  storyTeaser: {
+    fontSize: 14,
+  },
+  fullStory: {
+    marginBottom: 40,
+    padding: 15,
+    backgroundColor: "#eee",
+    borderRadius: 10,
+  },
+});
+
+export default RecoveryStories;
