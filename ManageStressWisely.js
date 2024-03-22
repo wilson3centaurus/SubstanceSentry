@@ -10,34 +10,71 @@ const ManageStressWisely = () => {
           source={require("./images/stress-management.jpg")} // Replace with a relevant image
           style={styles.heroImage}
         />
-        <Text style={styles.heroTitle}>Manage Stress Wisely: Develop Healthy Coping Skills</Text>
+        <Text style={styles.heroTitle}>
+          Manage Stress Wisely: Develop Healthy Coping Skills
+        </Text>
       </View>
       <View style={styles.contentSection}>
-        <Text style={styles.contentTitle}>Why are healthy coping skills important?</Text>
+        <Text style={styles.contentTitle}>
+          Why are healthy coping skills important?
+        </Text>
         <Text style={styles.contentText}>
-          Life can be stressful, and everyone experiences challenges. Having healthy coping skills equips you to manage stress effectively, preventing it from leading to unhealthy behaviors. Here's how:
+          Life can be stressful, and everyone experiences challenges. Having
+          healthy coping skills equips you to manage stress effectively,
+          preventing it from leading to unhealthy behaviors. Here's how:
         </Text>
         <View style={styles.reasonsList}>
           <View style={styles.reasonItem}>
-            <MaterialCommunityIcons name="shield-check" size={32} color="#007bff" style={styles.reasonIcon} />
+            <MaterialCommunityIcons
+              name="shield-check"
+              size={32}
+              color="#007bff"
+              style={styles.reasonIcon}
+            />
             <Text style={styles.reasonText}>Reduce Stress and Anxiety</Text>
           </View>
           <View style={styles.reasonItem}>
-            <MaterialCommunityIcons name="heart-outline" size={32} color="#007bff" style={styles.reasonIcon} />
-            <Text style={styles.reasonText}>Improve Your Emotional Wellbeing</Text>
+            <MaterialCommunityIcons
+              name="heart-outline"
+              size={32}
+              color="#007bff"
+              style={styles.reasonIcon}
+            />
+            <Text style={styles.reasonText}>
+              Improve Your Emotional Wellbeing
+            </Text>
           </View>
           <View style={styles.reasonItem}>
-            <MaterialCommunityIcons name="brain" size={32} color="#007bff" style={styles.reasonIcon} />
-            <Text style={styles.reasonText}>Promote Clear Thinking and Decision Making</Text>
+            <MaterialCommunityIcons
+              name="brain"
+              size={32}
+              color="#007bff"
+              style={styles.reasonIcon}
+            />
+            <Text style={styles.reasonText}>
+              Promote Clear Thinking and Decision Making
+            </Text>
           </View>
           <View style={styles.reasonItem}>
-            <MaterialCommunityIcons name="human-handholding" size={32} color="#007bff" style={styles.reasonIcon} />
-            <Text style={styles.reasonText}>Maintain Healthy Relationships</Text>
+            <MaterialCommunityIcons
+              name="handshake-outline"
+              size={32}
+              color="#007bff"
+              style={styles.reasonIcon}
+            />
+            <Text style={styles.reasonText}>
+              Maintain Healthy Relationships
+            </Text>
           </View>
         </View>
         <TouchableOpacity style={styles.actionButton}>
           <Text style={styles.actionButtonText}>Explore Coping Mechanisms</Text>
-          <MaterialCommunityIcons name="chevron-right" size={24} color="#fff" style={styles.actionButtonIcon} />
+          <MaterialCommunityIcons
+            name="chevron-right"
+            size={24}
+            color="#fff"
+            style={styles.actionButtonIcon}
+          />
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -78,13 +115,19 @@ const styles = StyleSheet.create({
   reasonsList: {
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-between",
+    justifyContent: "center",
     marginBottom: 20,
   },
   reasonItem: {
     alignItems: "center",
     marginRight: 10,
     marginBottom: 10,
+    borderColor: "red",
+    borderWidth: 2,
+    borderRadius: 10,
+    width: 400,
+    height: 80,
+    backgroundColor: '',
   },
   reasonIcon: {
     marginBottom: 5,
