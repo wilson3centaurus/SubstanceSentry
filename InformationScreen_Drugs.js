@@ -6,7 +6,7 @@ const InformationScreen_Drugs = () => {
     <View style={styles.container}>
       <View style={styles.banner}>
         <Image
-          source={require("./images/drugs.png")}
+          source={require("./images/drugs (2).png")}
           style={styles.bannerImage}
         />
         <Text style={styles.appName}>Drug and Substance abuse</Text>
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   },
   banner: {
     position: "relative",
-    height: "23%",
+    height: "22%",
   },
   bannerImage: {
     width: "100%",

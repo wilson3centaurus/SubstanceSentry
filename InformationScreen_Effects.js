@@ -9,7 +9,7 @@ const InformationScreen_Effects = () => {
     <View style={styles.container}>
       <View style={styles.banner}>
         <Image
-          source={require("./images/istockphoto-1046020090-612x612.jpg")} // Replace with your banner image
+          source={require("./images/effects.png")} // Replace with your banner image
           style={styles.bannerImage}
         />
         <Text style={styles.appName}>Drug Abuse Effects</Text>
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
   },
   banner: {
     position: "relative",
-    height: "23%",
+    height: "25%",
   },
   bannerImage: {
     width: "100%",
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "bold",
     marginBottom: 10,
-    color: "#ECDFDA",
+    color: "#fff",
     position: "absolute",
     bottom: 50,
     left: 3,

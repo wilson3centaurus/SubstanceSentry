@@ -39,7 +39,7 @@ export default function App() {
           name="InformationScreen_Signs"
           component={InformationScreen_Signs}
         />
-        
+        <Stack.Screen name="Resources" component={Resources} />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>

@@ -11,7 +11,7 @@ const LoadingScreen = ({ navigation }) => {
   useEffect(() => {
     Animated.timing(loadingProgress, {
       toValue: 1,
-      duration: 10000, // 10000 milliseconds (10 seconds)
+      duration: 5000, // 10000 milliseconds (10 seconds)
       useNativeDriver: false,
     }).start(() => {
       // Transition to home screen after loading

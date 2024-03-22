@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import backgroundImage from "./images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386ba4b.jpg";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons"; // Import icons
+//import SettingsIcon from "@mui/icons-material/Settings";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -25,11 +26,7 @@ const HomeScreen = () => {
           style={styles.card}
           onPress={() => navigation.navigate("InformationScreen")}
         >
-          <MaterialCommunityIcons
-            name="information-outline"
-            size={50}
-            color="#fff"
-          />
+          <MaterialCommunityIcons name="lightbulb" size={50} color="#fff" />
           <Text style={styles.cardText}>Get Informed</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -64,11 +61,7 @@ const HomeScreen = () => {
           style={styles.card}
           onPress={() => navigation.navigate("Settings")}
         >
-          <MaterialCommunityIcons
-            name="settings"
-            size={50}
-            color="#fff"
-          />
+          <MaterialCommunityIcons name="cog" size={50} color="#fff" />
           <Text style={styles.cardText}>Settings</Text>
         </TouchableOpacity>
       </View>
@@ -145,6 +138,7 @@ const styles = StyleSheet.create({
     height: "30%",
     marginTop: 10,
     backgroundColor: "#0173b1",
+    paddingTop: 20,
     //opacity: 0.5,
   },
   cardIcon: {
