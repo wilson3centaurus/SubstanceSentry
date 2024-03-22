@@ -67,15 +67,6 @@ const ManageStressWisely = () => {
             </Text>
           </View>
         </View>
-        <TouchableOpacity style={styles.actionButton}>
-          <Text style={styles.actionButtonText}>Explore Coping Mechanisms</Text>
-          <MaterialCommunityIcons
-            name="chevron-right"
-            size={24}
-            color="#fff"
-            style={styles.actionButtonIcon}
-          />
-        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -107,6 +98,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 10,
+    fontStyle: "italic",
   },
   contentText: {
     lineHeight: 20,
@@ -122,34 +114,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginRight: 10,
     marginBottom: 10,
-    borderColor: "red",
-    borderWidth: 2,
     borderRadius: 10,
     width: 400,
     height: 80,
-    backgroundColor: '',
+    backgroundColor: "#CEE5E7",
   },
   reasonIcon: {
     marginBottom: 5,
+    marginTop: 5,
   },
   reasonText: {
     fontSize: 16,
-  },
-  actionButton: {
-    backgroundColor: "#007bff",
-    padding: 15,
-    borderRadius: 10,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  actionButtonText: {
-    color: "#fff",
-    fontSize: 16,
+    color: "#12305A",
     fontWeight: "bold",
-  },
-  actionButtonIcon: {
-    marginLeft: 10,
   },
 });
 

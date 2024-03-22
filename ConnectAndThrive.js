@@ -105,6 +105,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 10,
+    fontStyle: "italic",
   },
   contentText: {
     lineHeight: 20,
@@ -120,6 +121,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginRight: 10,
     marginBottom: 10,
+    borderRadius: 10,
+    width: 400,
+    height: 99,
+    backgroundColor: "#CEE5E7",
   },
   reasonIcon: {
     marginBottom: 5,
@@ -128,6 +133,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: "#12305A",
     fontWeight: "bold",
+    marginBottom: 50,
   },
   actionButton: {
     backgroundColor: "#007bff",

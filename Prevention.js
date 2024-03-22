@@ -34,8 +34,7 @@ const Prevention = () => {
       icon: "book-open-outline",
       backgroundColor: "#CEE5E7",
       onPress: () => {
-        // Handle click on "Empower Yourself with Knowledge" card
-        console.log("Gaining knowledge about addiction...");
+        navigation.navigate("LearnAndEmpower");
       },
     },
     {
