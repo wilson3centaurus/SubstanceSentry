@@ -15,7 +15,8 @@ import Resources from "./Resources";
 import Support from "./Support";
 import Settings from "./Settings";
 import Emergency from "./Emergency";
-
+import ConnectAndThrive from "./ConnectAndThrive";
+import ManageStressWisely from "./ManageStressWisely";
 
 
 const Stack = createStackNavigator();
@@ -40,6 +41,12 @@ export default function App() {
           component={InformationScreen_Signs}
         />
         <Stack.Screen name="Resources" component={Resources} />
+        <Stack.Screen name="Prevention" component={Prevention} />
+        <Stack.Screen name="ConnectAndThrive" component={ConnectAndThrive} />
+        <Stack.Screen
+          name="ManageStressWisely"
+          component={ManageStressWisely}
+        />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
