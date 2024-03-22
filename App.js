@@ -25,7 +25,10 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="LoadingScreen" headerMode="none">
+      <Stack.Navigator
+        initialRouteName="LoadingScreen"
+        screenOptions={{ headerShown: false }}
+      >
         <Stack.Screen name="LoadingScreen" component={LoadingScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="InformationScreen" component={InformationScreen} />

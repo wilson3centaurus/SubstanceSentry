@@ -7,14 +7,14 @@ const LearnAndEmpower = () => {
     {
       title: "The Unexpected Journey of Addiction: A Memoir",
       author: "Gabrielle Kazan",
-      imageUrl: require("./images/book1.jpg"), // Replace with your image path
+      imageUrl: require("./images/benjamin-voros-phIFdC6lA4E-unsplash.jpg"), // Replace with your image path
       description:
         "A powerful and inspiring memoir that chronicles the author's journey through addiction and recovery.",
     },
     {
       title: "Breaking the Chains of Addiction: A Holistic Approach",
       author: "Dr. David Jones",
-      imageUrl: require("./images/book2.jpg"), // Replace with your image path
+      imageUrl: require("./images/benjamin-voros-phIFdC6lA4E-unsplash.jpg"), // Replace with your image path
       description:
         "This book explores the physical, emotional, and social aspects of addiction, offering a comprehensive guide to recovery.",
     },
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
   resourcesTitle: {
     fontSize: 20,
     fontWeight: "bold",
-    marginBottom: 10,
+    marginBottom: 30,
   },
   bookItem: {
     flexDirection: "row",
