@@ -133,7 +133,6 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: "#12305A",
     fontWeight: "bold",
-    marginBottom: 50,
   },
   actionButton: {
     backgroundColor: "#007bff",
