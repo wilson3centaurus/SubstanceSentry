@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { View, Text, Image, StyleSheet, Animated } from "react-native";
-import backgroundImage from "./images/image-forest3.png";
+import backgroundImage from "./images/img (4).jpg";
 import logoImage from "./images/logo.png";
 
 const LoadingScreen = ({ navigation }) => {
@@ -11,7 +11,7 @@ const LoadingScreen = ({ navigation }) => {
   useEffect(() => {
     Animated.timing(loadingProgress, {
       toValue: 1,
-      duration: 5000, // 5000 milliseconds (5 seconds)
+      duration: 10000, // 10000 milliseconds (10 seconds)
       useNativeDriver: false,
     }).start(() => {
       // Transition to home screen after loading
@@ -21,6 +21,10 @@ const LoadingScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <Image
+        source={backgroundImage}
+        style={styles.backgroundImage}
+      />
       <Image source={logoImage} style={styles.logo} />
       <Text style={styles.appName}>Substance Sentry</Text>
       <Text style={styles.description}>
@@ -66,15 +70,15 @@ const styles = StyleSheet.create({
     marginTop: 100,
   },
   appName: {
-    fontSize: 40,
+    fontSize: 45,
     fontWeight: "bold",
     marginBottom: 10,
-    color: "#282D60",
+    color: "#fff",
   },
   description: {
     fontSize: 16,
     marginBottom: 20,
-    color: "#D6D7DA",
+    color: "#C7C3FF",
   },
   footer: {
     position: "absolute",

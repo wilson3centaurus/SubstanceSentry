@@ -128,7 +128,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 50,
     left: 3,
-    right: 0,
     marginLeft: 10,
   },
   bannerText: {

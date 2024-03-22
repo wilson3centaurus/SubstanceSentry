@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity} from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import backgroundImage from "./images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386ba4b.jpg";
 import { useNavigation } from "@react-navigation/native";
+import { MaterialCommunityIcons } from "@expo/vector-icons"; // Import icons
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -24,9 +25,10 @@ const HomeScreen = () => {
           style={styles.card}
           onPress={() => navigation.navigate("InformationScreen")}
         >
-          <Image
-            source={require("./images/logo.png")}
-            style={styles.cardIcon}
+          <MaterialCommunityIcons
+            name="information-outline"
+            size={50}
+            color="#fff"
           />
           <Text style={styles.cardText}>Get Informed</Text>
         </TouchableOpacity>
@@ -34,48 +36,38 @@ const HomeScreen = () => {
           style={styles.card}
           onPress={() => navigation.navigate("Prevention")}
         >
-          <Image
-            source={require("./images/logo.png")}
-            style={styles.cardIcon}
-          />
+          <MaterialCommunityIcons name="shield-check" size={50} color="#fff" />
           <Text style={styles.cardText}>Prevention and Education</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
-          onPress={() => navigation.navigate("Support")}>
-          <Image
-            source={require("./images/logo.png")}
-            style={styles.cardIcon}
-          />
+          onPress={() => navigation.navigate("Support")}
+        >
+          <MaterialCommunityIcons name="heart-outline" size={50} color="#fff" />
           <Text style={styles.cardText}>Support and Treatment</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
           onPress={() => navigation.navigate("Emegency")}
         >
-          <Image
-            source={require("./images/logo.png")}
-            style={styles.cardIcon}
-          />
-          <Text style={styles.cardText}>Emegency Assistance</Text>
+          <MaterialCommunityIcons name="alert-circle" size={50} color="#fff" />
+          <Text style={styles.cardText}>Emergency Assistance</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
-          onPress={() => navigation.navigate("")}
+          onPress={() => navigation.navigate("Statistics")}
         >
-          <Image
-            source={require("./images/logo.png")}
-            style={styles.cardIcon}
-          />
+          <MaterialCommunityIcons name="chart-bar" size={50} color="#fff" />
           <Text style={styles.cardText}>Statistics</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
           onPress={() => navigation.navigate("Settings")}
         >
-          <Image
-            source={require("./images/logo.png")}
-            style={styles.cardIcon}
+          <MaterialCommunityIcons
+            name="settings"
+            size={50}
+            color="#fff"
           />
           <Text style={styles.cardText}>Settings</Text>
         </TouchableOpacity>

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons"; // Import icons
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const InformationScreen_Signs = () => {
   return (
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
   },
   banner: {
     position: "relative",
-    height: "23%",
+    height: "25%",
   },
   bannerImage: {
     width: "100%",
@@ -190,14 +190,14 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     position: "absolute",
-    top: "40%",
+    top: "50%",
     left: "4%",
   },
   bannerText: {
     fontSize: 18,
     color: "#fff",
     position: "absolute",
-    top: "65%",
+    top: "74%",
     left: "4%",
   },
   signsInfo: {

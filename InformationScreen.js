@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity} from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import backgroundImage from "./images/Sierra_960_5dd659bfa2f7821d69fc15de08717289.jpg";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
+import { MaterialCommunityIcons } from "@expo/vector-icons"; // Import icons
 
 const InformationScreen = () => {
   const navigation = useNavigation();
@@ -24,37 +25,33 @@ const InformationScreen = () => {
           onPress={() => navigation.navigate("InformationScreen_Drugs")}
         >
           <Image
-            source={require("./images/logo.png")}
-            style={styles.cardIcon}
+            source={require("./images/drugs-icon.png")}
+            style={{width: "12%", height: "60%"}}
           />
           <Text style={styles.cardText}>Drug and Substance abuse</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
-          onPress={() => navigation.navigate("InformationScreen_Effects")}>
-          <Image
-            source={require("./images/logo.png")}
-            style={styles.cardIcon}
-          />
+          onPress={() => navigation.navigate("InformationScreen_Effects")}
+        >
+          <MaterialCommunityIcons name="blur" size={50} color="#fff" />
           <Text style={styles.cardText}>Effects of drugs</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
           onPress={() => navigation.navigate("InformationScreen_Signs")}
         >
-          <Image
-            source={require("./images/logo.png")}
-            style={styles.cardIcon}
-          />
+          <MaterialCommunityIcons name="alert-circle" size={50} color="#fff" />
           <Text style={styles.cardText}>Signs of Abuse</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
           onPress={() => navigation.navigate("Resources")}
         >
-          <Image
-            source={require("./images/logo.png")}
-            style={styles.cardIcon}
+          <MaterialCommunityIcons
+            name="book-open-outline"
+            size={50}
+            color="#fff"
           />
           <Text style={styles.cardText}>Resources</Text>
         </TouchableOpacity>
