@@ -1,11 +1,17 @@
-import React from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import backgroundImage from "./images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386ba4b.jpg";
 import { useNavigation } from "@react-navigation/native";
-import { MaterialCommunityIcons } from "@expo/vector-icons"; // Import icons
-//import SettingsIcon from "@mui/icons-material/Settings";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -38,7 +44,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
-          onPress={() => navigation.navigate("Support")}
+          onPress={() => navigation.navigate("SupportTreatment")}
         >
           <MaterialCommunityIcons name="heart-outline" size={50} color="#fff" />
           <Text style={styles.cardText}>Support and Treatment</Text>
@@ -59,7 +65,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
-          onPress={() => navigation.navigate("Settings")}
+          onPress={() => navigation.navigate("")}
         >
           <MaterialCommunityIcons name="cog" size={50} color="#fff" />
           <Text style={styles.cardText}>Settings</Text>
