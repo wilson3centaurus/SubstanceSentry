@@ -51,14 +51,22 @@ const SupportTreatment = () => {
     // Sample counselling service information
   ];
 
-  // ... similar data structures for other cards
+const rehabServices = [
+  {
+    name: "Harare Rehabilitation Centre",
+    location: "Harare",
+    contact: "+263 242 700 100",
+    website: "https://www.hararerehab.com", // Replace with actual website if available
+    programs: ["Detoxification", "Residential Treatment", "Outpatient Therapy"],
+  },
+  // ... add more rehab facilities with details
+];
 
   const icons = [
     "account-group", // Support Groups
     "heart-outline", // Counselling Services
     "hospital-building", // Rehab Services
     "map-marker-outline", // Geolocation Support
-    "book-open-page-variant", // Testimonials
   ];
 
 return (
@@ -80,7 +88,6 @@ return (
         "Counselling Services",
         "Rehab Services",
         "Geolocation Support",
-        "Testimonials",
       ].map((cardTitle, index) => (
         <TouchableOpacity
           key={index}
@@ -104,7 +111,6 @@ return (
           </View>
           {expandedCards[index] && (
             <View style={styles.cardContent}>
-              {/* Display detailed information for each card here based on the index */}
               {index === 0 && (
                 <>
                   <Text style={styles.boldText}>
@@ -130,13 +136,39 @@ return (
                           size={20}
                           color="#007bff"
                         />
-                        <Text style={styles.boldText}>{group.name}</Text>
+                        <Text style={{ marginLeft: 10 }}>{group.name}</Text>
                       </View>
                     )
                   )}
                 </>
               )}
-              {/* ... populate content for other cards based on your data structures */}
+              {expandedCards[index] && (
+                <View style={styles.cardContent}>
+                  {index === 2 && (
+                    <>
+                      <Text>
+                        Here's a list of rehab facilities in Zimbabwe
+                        (Disclaimer: Verify information with facilities
+                        directly):
+                      </Text>
+                      {rehabServices.map((facility) => (
+                        <View key={facility.name}>
+                          <Text style={styles.boldText}>{facility.name}</Text>
+                          <Text>{facility.location}</Text>
+                          <Text>Contact: {facility.contact}</Text>
+                          {facility.website && (
+                            <Text>Website: {facility.website}</Text>
+                          )}
+                          <Text>Programs: {facility.programs.join(", ")}</Text>
+                          <View style={styles.divider} />{" "}
+                          {/* Optional divider between facilities */}
+                        </View>
+                      ))}
+                    </>
+                  )}
+                  {/* ... other card content */}
+                </View>
+              )}
             </View>
           )}
         </TouchableOpacity>
