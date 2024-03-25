@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Image,
+  ScrollView,
+} from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const SupportTreatment = () => {
@@ -117,90 +124,97 @@ return (
         Support Beacon: Your Path to Recovery
       </Text>
     </View>
-    <View style={styles.cardsContainer}>
-      {[
-        "Support Groups",
-        "Counselling Services",
-        "Rehab Services",
-        "Geolocation Support",
-      ].map((cardTitle, index) => (
-        <TouchableOpacity
-          key={index}
-          style={styles.card}
-          onPress={() => handleCardPress(index)}
-        >
-          <View style={styles.cardHeader}>
-            <MaterialCommunityIcons
-              name={icons[index]}
-              size={24}
-              color="#007bff"
-            />
-            <Text style={styles.cardTitle}>{cardTitle}</Text>
-            {expandedCards[index] && (
+    <ScrollView style={styles.strollContainer}>
+      <View style={styles.cardsContainer}>
+        {[
+          "Support Groups",
+          "Counselling Services",
+          "Rehab Services",
+          "Geolocation Support",
+        ].map((cardTitle, index) => (
+          <TouchableOpacity
+            key={index}
+            style={styles.card}
+            onPress={() => handleCardPress(index)}
+          >
+            <View style={styles.cardHeader}>
               <MaterialCommunityIcons
-                name="chevron-down"
+                name={icons[index]}
                 size={24}
                 color="#007bff"
               />
-            )}
-          </View>
-          {expandedCards[index] && (
-            <View style={styles.cardContent}>
-              {index === 0 && (
-                <>
-                  <Text style={styles.boldText}>
-                    Here's a list of local support groups in Zimbabwe:
-                  </Text>
-                  {supportGroups.slice(0, 5).map(
-                    (
-                      group // Only show first 5 groups (local)
-                    ) => (
-                      <Text key={group.name}>
-                        {group.name} - {group.contact}
-                      </Text>
-                    )
-                  )}
-                  <Text style={styles.boldText}>Online Support Groups:</Text>
-                  {supportGroups.slice(6).map(
-                    (
-                      group // Show online groups starting from index 6
-                    ) => (
-                      <View key={group.name} style={styles.onlineGroup}>
-                        <MaterialCommunityIcons
-                          name={group.icon}
-                          size={20}
-                          color="#007bff"
-                        />
-                        <Text style={{ marginLeft: 10 }}>{group.name}</Text>
-                      </View>
-                    )
-                  )}
-                </>
-              )}
-              {index === 2 && (
-                <>
-                  <Text>
-                    Here's a list of rehab facilities in Zimbabwe (Disclaimer:
-                    Verify information with facilities directly):
-                  </Text>
-                  {rehabServices.map((facility) => (
-                    <View key={facility.name}>
-                      <Text style={styles.boldText}>{facility.name}</Text>
-                      <Text>{facility.location}</Text>
-                      <Text>Contact: {facility.contact}</Text>
-                      {facility.website && (
-                        <Text>Website: {facility.website}</Text>
-                      )}
-                      <Text>Programs: {facility.programs.join(", ")}</Text>
-                    </View>
-                  ))}
-                </>
+              <Text style={styles.cardTitle}>{cardTitle}</Text>
+              {expandedCards[index] && (
+                <MaterialCommunityIcons
+                  name="chevron-down"
+                  size={24}
+                  color="#007bff"
+                />
               )}
             </View>
-          )}
-        </TouchableOpacity>
-      ))}
-    </View>
+            {expandedCards[index] && (
+              <View style={styles.cardContent}>
+                {index === 0 && (
+                  <>
+                    <Text style={styles.boldText}>
+                      Here's a list of local support groups in Zimbabwe:
+                    </Text>
+                    {supportGroups.slice(0, 5).map(
+                      (
+                        group // Only show first 5 groups (local)
+                      ) => (
+                        <Text key={group.name}>
+                          {group.name} - {group.contact}
+                        </Text>
+                      )
+                    )}
+                    <Text style={styles.boldText}>Online Support Groups:</Text>
+                    {supportGroups.slice(6).map(
+                      (
+                        group // Show online groups starting from index 6
+                      ) => (
+                        <View key={group.name} style={styles.onlineGroup}>
+                          <MaterialCommunityIcons
+                            name={group.icon}
+                            size={20}
+                            color="#007bff"
+                          />
+                          <Text style={{ marginLeft: 10 }}>{group.name}</Text>
+                        </View>
+                      )
+                    )}
+                  </>
+                )}
+                {index === 2 && (
+                  <>
+                    <Text>
+                      Here's a list of rehab facilities in Zimbabwe (Disclaimer:
+                      Verify information with facilities directly):
+                    </Text>
+                    {rehabServices.map((facility) => (
+                      <View key={facility.name}>
+                        <Text style={styles.boldText}>{facility.name}</Text>
+                        <Text>{facility.location}</Text>
+                        <Text>Contact: {facility.contact}</Text>
+                        {facility.website && (
+                          <Text>Website: {facility.website}</Text>
+                        )}
+                        <Text>Programs: {facility.programs.join(", ")}</Text>
+                      </View>
+                    ))}
+                  </>
+                )}
+                {index === 1 && (
+                  <>
+                    <Text style={styles.stillInDev}>⚠️ Section still under development ⚒️</Text>
+                  </>
+                )}
+              </View>
+            )}
+          </TouchableOpacity>
+        ))}
+      </View>
+    </ScrollView>
   </View>
 );
               };
@@ -268,6 +282,16 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
     marginTop: 10,
+  },
+  stillInDev: {
+    textAlign: "center",
+    fontSize: 16,
+    backgroundColor: "#514F47",
+    color: "#fff",
+    borderColor: "red",
+    borderWidth: 3,
+    borderRadius: 5,
+    padding: 8,
   },
   onlineGroup: {
     flexDirection: "row",
