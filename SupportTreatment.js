@@ -206,7 +206,16 @@ return (
                 )}
                 {index === 1 && (
                   <>
-                    <Text style={styles.stillInDev}>⚠️ Section still under development ⚒️</Text>
+                    <Text style={styles.stillInDev}>
+                      ⚠️ Section still under development ⚒️
+                    </Text>
+                  </>
+                )}
+                {index === 3 && (
+                  <>
+                    <Text style={styles.stillInDev}>
+                      ⚠️ Section still under development ⚒️
+                    </Text>
                   </>
                 )}
               </View>

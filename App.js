@@ -51,6 +51,7 @@ export default function App() {
         <Stack.Screen name="LearnAndEmpower" component={LearnAndEmpower} />
         <Stack.Screen name="RecoveryStories" component={RecoveryStories} />
         <Stack.Screen name="SupportTreatment" component={SupportTreatment} />
+        <Stack.Screen name="Emergency" component={Emergency} />
         <Stack.Screen
           name="ManageStressWisely"
           component={ManageStressWisely}

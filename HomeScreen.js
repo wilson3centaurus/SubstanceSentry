@@ -51,7 +51,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
-          onPress={() => navigation.navigate("Emegency")}
+          onPress={() => navigation.navigate("Emergency")}
         >
           <MaterialCommunityIcons name="alert-circle" size={50} color="#fff" />
           <Text style={styles.cardText}>Emergency Assistance</Text>
