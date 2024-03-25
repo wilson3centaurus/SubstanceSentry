@@ -14,6 +14,7 @@ import Prevention from "./Prevention";
 import Resources from "./Resources";
 import Support from "./Support";
 import Settings from "./Settings";
+import Statistics from "./Statistics";
 import Emergency from "./Emergency";
 import ConnectAndThrive from "./ConnectAndThrive";
 import ManageStressWisely from "./ManageStressWisely";
@@ -52,6 +53,7 @@ export default function App() {
         <Stack.Screen name="RecoveryStories" component={RecoveryStories} />
         <Stack.Screen name="SupportTreatment" component={SupportTreatment} />
         <Stack.Screen name="Emergency" component={Emergency} />
+        <Stack.Screen name="Statistics" component={Statistics} />
         <Stack.Screen
           name="ManageStressWisely"
           component={ManageStressWisely}

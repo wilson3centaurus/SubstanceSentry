@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   heroTitle: {
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 10,
@@ -272,9 +272,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   preventionIcon: {
-    fontSize: 20,
+    fontSize: 30,
     marginRight: 10,
-    color: "#f00", // Red for warnings
+    color: "#f00",
   },
   preventionText: {
     fontWeight: "bold",
@@ -283,7 +283,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   callButton: {
-    marginLeft: "auto", // Align button to the right
+    marginLeft: "auto",
   },
 });
 
