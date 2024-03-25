@@ -59,7 +59,42 @@ const rehabServices = [
     website: "https://www.hararerehab.com", // Replace with actual website if available
     programs: ["Detoxification", "Residential Treatment", "Outpatient Therapy"],
   },
-  // ... add more rehab facilities with details
+  {
+    name: "Serenity Mind Centre",
+    location: "Harare",
+    contact: "Please search online for contact details", // Placeholder, replace with actual contact info
+    programs: [
+      "Individual Therapy",
+      "Group Therapy",
+      "Relapse Prevention",
+      "Aftercare",
+    ],
+  },
+  {
+    name: "Ruwa Rehabilitation Centre",
+    location: "Ruwa",
+    contact:
+      "Website: https://thisabilityhub.org.zw/listing/ruwa-rehabilitation-centre/",
+    programs: ["Substance Abuse Programs", "Mental Health Treatment"],
+  },
+  {
+    name: "Mubatirapamwe Trust",
+    location: "Harare",
+    contact: "Please search online for contact details", // Placeholder, replace with actual contact info
+    programs: ["Drug & Alcohol Rehabilitation", "Structured Support"],
+  },
+  {
+    name: "Care Addictions Rehab",
+    location: "Bulawayo",
+    contact: "Please search online for contact details", // Placeholder, replace with actual contact info
+    programs: ["Personalized Treatment Plans", "Addiction Treatment"],
+  },
+  {
+    name: "Highlands Halfway House",
+    location: "Harare",
+    contact: "Please search online for contact details", // Placeholder, replace with actual contact info
+    programs: ["Supportive Living Environment", "Recovery Transition"],
+  },
 ];
 
   const icons = [
@@ -142,32 +177,24 @@ return (
                   )}
                 </>
               )}
-              {expandedCards[index] && (
-                <View style={styles.cardContent}>
-                  {index === 2 && (
-                    <>
-                      <Text>
-                        Here's a list of rehab facilities in Zimbabwe
-                        (Disclaimer: Verify information with facilities
-                        directly):
-                      </Text>
-                      {rehabServices.map((facility) => (
-                        <View key={facility.name}>
-                          <Text style={styles.boldText}>{facility.name}</Text>
-                          <Text>{facility.location}</Text>
-                          <Text>Contact: {facility.contact}</Text>
-                          {facility.website && (
-                            <Text>Website: {facility.website}</Text>
-                          )}
-                          <Text>Programs: {facility.programs.join(", ")}</Text>
-                          <View style={styles.divider} />{" "}
-                          {/* Optional divider between facilities */}
-                        </View>
-                      ))}
-                    </>
-                  )}
-                  {/* ... other card content */}
-                </View>
+              {index === 2 && (
+                <>
+                  <Text>
+                    Here's a list of rehab facilities in Zimbabwe (Disclaimer:
+                    Verify information with facilities directly):
+                  </Text>
+                  {rehabServices.map((facility) => (
+                    <View key={facility.name}>
+                      <Text style={styles.boldText}>{facility.name}</Text>
+                      <Text>{facility.location}</Text>
+                      <Text>Contact: {facility.contact}</Text>
+                      {facility.website && (
+                        <Text>Website: {facility.website}</Text>
+                      )}
+                      <Text>Programs: {facility.programs.join(", ")}</Text>
+                    </View>
+                  ))}
+                </>
               )}
             </View>
           )}

@@ -5,14 +5,14 @@ const storiesData = [
   {
     id: 1,
     title: "From Party Girl to Yoga Instructor: Lisa's Transformation",
-    imageUrl: require("./images/friends-laughing.jpg"), // Replace with your image
+    imageUrl: require("./images/testimonial (1).jpg"), // Replace with your image
     description:
       "Lisa struggled with alcohol dependence for years. After hitting rock bottom, she discovered yoga and mindfulness practices, which became her path to recovery and a newfound passion for helping others.",
   },
   {
     id: 2,
     title: "Finding Purpose Through Music: David's Story",
-    imageUrl: require("./images/image-forest2.png"), // Replace with your image
+    imageUrl: require("./images/testimonial (2).jpg"), // Replace with your image
     description:
       "David battled addiction for most of his adult life. Through music therapy and reconnecting with his passion for songwriting, he found a healthy outlet for expression and rebuilt his life.",
   },
@@ -101,11 +101,15 @@ const styles = StyleSheet.create({
     padding: 10,
     width: 400,
     height: 130,
+    borderColor: "#9199AE",
+    borderWidth: 1,
   },
   storyImage: {
-    width: 80,
-    height: 80,
+    width: 90,
+    height: 130,
     marginRight: 10,
+    marginLeft: -10,
+    marginTop: -10,
     borderRadius: 5,
   },
   storyInfo: {
