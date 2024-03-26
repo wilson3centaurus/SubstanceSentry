@@ -13,30 +13,25 @@ import backgroundImage from "./images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386
 import { useNavigation } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import axios from "axios";
-
+import localQuotes from './quotes'; // Importing the local quotes array
 
 const HomeScreen = () => {
   const navigation = useNavigation();
   const [quote, setQuote] = useState("");
+  
 
-   useEffect(() => {
-     const fetchQuote = async () => {
-       try {
-         const response = await axios.get(
-           "https://api.quotable.io/random?tags=drugs"
-         );
-         const { content } = response.data;
-         setQuote(content);
-       } catch (error) {
-         console.error("Error fetching quote:", error);
-       }
-     };
+  useEffect(() => {
+    const fetchQuote = async () => {
+        // If fetching from API fails, use a local quote as a fallback
+        const randomIndex = Math.floor(Math.random() * localQuotes.length);
+        setQuote(localQuotes[randomIndex]);
+      
+    };
 
-     const intervalId = setInterval(fetchQuote, 10000); // Fetch a new quote every 10 seconds
+    const intervalId = setInterval(fetchQuote, 10000); // Fetch a new quote every 10 seconds
 
-     return () => clearInterval(intervalId);
-   }, []);
-
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <View style={styles.container}>
