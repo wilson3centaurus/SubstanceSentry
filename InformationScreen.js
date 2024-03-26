@@ -56,12 +56,6 @@ const InformationScreen = () => {
           <Text style={styles.cardText}>Resources</Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.navigation}>
-        <Text style={styles.quotes}>Did you know?</Text>
-        <Text style={styles.quote}>
-          Anti drug and substance abuse quotes here...
-        </Text>
-      </View>
     </View>
   );
 };
@@ -145,18 +139,6 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     textAlign: "center",
     color: "#fff",
-  },
-  navigation: {
-    alignItems: "center",
-    backgroundColor: "#002e60",
-    height: 60,
-  },
-  quotes: {
-    color: "#050a14",
-    fontSize: 20,
-  },
-  quote: {
-    color: "#99b3e6",
   },
 });
 

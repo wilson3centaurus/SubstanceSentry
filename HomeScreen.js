@@ -18,14 +18,11 @@ import localQuotes from './quotes'; // Importing the local quotes array
 const HomeScreen = () => {
   const navigation = useNavigation();
   const [quote, setQuote] = useState("");
-  
 
   useEffect(() => {
     const fetchQuote = async () => {
-        // If fetching from API fails, use a local quote as a fallback
         const randomIndex = Math.floor(Math.random() * localQuotes.length);
         setQuote(localQuotes[randomIndex]);
-      
     };
 
     const intervalId = setInterval(fetchQuote, 10000); // Fetch a new quote every 10 seconds
@@ -175,7 +172,7 @@ const styles = StyleSheet.create({
   navigation: {
     alignItems: "center",
     backgroundColor: "#002e60",
-    height: 60,
+    height: 80,
   },
   quotes: {
     color: "#050a14",
@@ -183,6 +180,8 @@ const styles = StyleSheet.create({
   },
   quote: {
     color: "#99b3e6",
+    fontStyle: "italic",
+    textAlign: "center",
   },
 });
 
