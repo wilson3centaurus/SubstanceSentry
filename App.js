@@ -34,6 +34,7 @@ export default function App() {
         <Stack.Screen name="LoadingScreen" component={LoadingScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="InformationScreen" component={InformationScreen} />
+        <Stack.Screen name="Settings" component={Settings} />
         <Stack.Screen
           name="InformationScreen_Drugs"
           component={InformationScreen_Drugs}

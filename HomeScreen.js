@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import {
   View,
   Text,
@@ -13,8 +13,36 @@ import backgroundImage from "./images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386
 import { useNavigation } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
+
+
 const HomeScreen = () => {
   const navigation = useNavigation();
+  const [quote, setQuote] = useState("");
+
+  const quotes = [
+    "Addiction is a family disease. One person may use, but the whole family suffers.",
+    "The opposite of addiction is not sobriety, but human connection.",
+    "Recovery is not for people who need it, it's for people who want it.",
+    "Addiction begins with the hope that something 'out there' can instantly fill up the emptiness inside.",
+    "Drugs are not the problem, they're what we use to solve the problem.",
+    "Addiction is not a choice, but recovery is.",
+  ];
+
+  const generateRandomQuote = () => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[randomIndex];
+  };
+
+  // Effect hook to update the quote at regular intervals
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const randomQuote = generateRandomQuote();
+      setQuote(randomQuote);
+    }, 1000); // 10 seconds
+
+    // Clean up function to clear the interval
+    return () => clearInterval(intervalId);
+  }, []); 
 
   return (
     <View style={styles.container}>
@@ -65,7 +93,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.card}
-          onPress={() => navigation.navigate("")}
+          onPress={() => navigation.navigate("Settings")}
         >
           <MaterialCommunityIcons name="cog" size={50} color="#fff" />
           <Text style={styles.cardText}>Settings</Text>
@@ -73,9 +101,7 @@ const HomeScreen = () => {
       </View>
       <View style={styles.navigation}>
         <Text style={styles.quotes}>Did you know?</Text>
-        <Text style={styles.quote}>
-          Anti drug and substance abuse quotes here...
-        </Text>
+        <Text style={styles.quote}>{quote}</Text>
       </View>
     </View>
   );
