@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { View, Text, Image, StyleSheet, Animated } from "react-native";
-import backgroundImage from "./images/img (4).jpg";
-import logoImage from "./images/logo.png";
+import backgroundImage from "../images/img (4).jpg";
+import logoImage from "../images/logo.png";
 
 const LoadingScreen = ({ navigation }) => {
   const [loadingProgress, setLoadingProgress] = useState(new Animated.Value(0));

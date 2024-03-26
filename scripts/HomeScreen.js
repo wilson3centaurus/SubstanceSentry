@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -7,13 +7,9 @@ import {
   TouchableOpacity,
   Alert,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import backgroundImage from "./images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386ba4b.jpg";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import axios from "axios";
-import localQuotes from './quotes'; // Importing the local quotes array
+import localQuotes from "./quotes"; // Importing the local quotes array
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -21,8 +17,8 @@ const HomeScreen = () => {
 
   useEffect(() => {
     const fetchQuote = async () => {
-        const randomIndex = Math.floor(Math.random() * localQuotes.length);
-        setQuote(localQuotes[randomIndex]);
+      const randomIndex = Math.floor(Math.random() * localQuotes.length);
+      setQuote(localQuotes[randomIndex]);
     };
 
     const intervalId = setInterval(fetchQuote, 10000); // Fetch a new quote every 10 seconds
@@ -34,7 +30,7 @@ const HomeScreen = () => {
     <View style={styles.container}>
       <View style={styles.banner}>
         <Image
-          source={require("./images/Sierra_960_5dd659bfa2f7821d69fc15de08717289.jpg")}
+          source={require("../images/Sierra_960_5dd659bfa2f7821d69fc15de08717289.jpg")}
           style={styles.bannerImage}
         />
         <Text style={styles.appName}>Substance Sentry</Text>

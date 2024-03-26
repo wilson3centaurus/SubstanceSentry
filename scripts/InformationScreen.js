@@ -1,7 +1,5 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
-import backgroundImage from "./images/Sierra_960_5dd659bfa2f7821d69fc15de08717289.jpg";
-import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons"; // Import icons
 
@@ -11,7 +9,7 @@ const InformationScreen = () => {
     <View style={styles.container}>
       <View style={styles.banner}>
         <Image
-          source={require("./images/peaceful-wallpaper-1366x768.jpg")}
+          source={require("../images/peaceful-wallpaper-1366x768.jpg")}
           style={styles.bannerImage}
         />
         <Text style={styles.appName}>Get Information</Text>
@@ -25,7 +23,7 @@ const InformationScreen = () => {
           onPress={() => navigation.navigate("InformationScreen_Drugs")}
         >
           <Image
-            source={require("./images/drugs-icon.png")}
+            source={require("../images/drugs-icon.png")}
             style={{width: "12%", height: "60%"}}
           />
           <Text style={styles.cardText}>Drug and Substance abuse</Text>

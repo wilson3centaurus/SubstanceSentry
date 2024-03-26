@@ -1,15 +1,15 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
-import brainImage from "./images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386ba4b.jpg";
-import lungsImage from "./images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386ba4b.jpg";
-import liverImage from "./images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386ba4b.jpg";
+import brainImage from "../images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386ba4b.jpg";
+import lungsImage from "../images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386ba4b.jpg";
+import liverImage from "../images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386ba4b.jpg";
 
 const InformationScreen_Effects = () => {
   return (
     <View style={styles.container}>
       <View style={styles.banner}>
         <Image
-          source={require("./images/effects.png")} // Replace with your banner image
+          source={require("../images/effects.png")} // Replace with your banner image
           style={styles.bannerImage}
         />
         <Text style={styles.appName}>Drug Abuse Effects</Text>

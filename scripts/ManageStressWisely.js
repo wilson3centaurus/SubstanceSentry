@@ -7,7 +7,7 @@ const ManageStressWisely = () => {
     <ScrollView style={styles.container}>
       <View style={styles.heroSection}>
         <Image
-          source={require("./images/stress-management.jpg")} // Replace with a relevant image
+          source={require("../images/stress-management.jpg")} // Replace with a relevant image
           style={styles.heroImage}
         />
         <Text style={styles.heroTitle}>

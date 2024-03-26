@@ -63,13 +63,13 @@ const rehabServices = [
     name: "Harare Rehabilitation Centre",
     location: "Harare",
     contact: "+263 242 700 100",
-    website: "https://www.hararerehab.com", // Replace with actual website if available
+    website: "https://www.hararerehab.com",
     programs: ["Detoxification", "Residential Treatment", "Outpatient Therapy"],
   },
   {
     name: "Serenity Mind Centre",
     location: "Harare",
-    contact: "Please search online for contact details", // Placeholder, replace with actual contact info
+    contact: "Please search online for contact details", 
     programs: [
       "Individual Therapy",
       "Group Therapy",
@@ -115,7 +115,7 @@ return (
   <View style={styles.container}>
     <View style={styles.banner}>
       <Image
-        source={require("./images/benjamin-voros-phIFdC6lA4E-unsplash.jpg")}
+        source={require("../images/benjamin-voros-phIFdC6lA4E-unsplash.jpg")}
         style={styles.bannerImage}
         blurRadius={5}
       />

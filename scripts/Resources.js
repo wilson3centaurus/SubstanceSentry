@@ -187,7 +187,7 @@ const Resources = () => {
     <View style={styles.container}>
       <View style={styles.banner}>
         <Image
-          source={require("./images/ghuj.png")}
+          source={require("../images/ghuj.png")}
           style={styles.bannerImage}
         />
         <Text style={styles.appName}>Resources</Text>

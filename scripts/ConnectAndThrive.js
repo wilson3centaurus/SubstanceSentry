@@ -7,7 +7,7 @@ const ConnectAndThrive = () => {
     <ScrollView style={styles.container}>
       <View style={styles.heroSection}>
         <Image
-          source={require("./images/friends-laughing.jpg")} // Replace with a relevant image
+          source={require("../images/friends-laughing.jpg")} 
           style={styles.heroImage}
         />
         <Text style={styles.heroTitle}>
