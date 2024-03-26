@@ -12,37 +12,31 @@ import { createStackNavigator } from "@react-navigation/stack";
 import backgroundImage from "./images/Aerial_V2_960_e4f16d9ab2de9e07fc69b471b386ba4b.jpg";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-
+import axios from "axios";
 
 
 const HomeScreen = () => {
   const navigation = useNavigation();
   const [quote, setQuote] = useState("");
 
-  const quotes = [
-    "Addiction is a family disease. One person may use, but the whole family suffers.",
-    "The opposite of addiction is not sobriety, but human connection.",
-    "Recovery is not for people who need it, it's for people who want it.",
-    "Addiction begins with the hope that something 'out there' can instantly fill up the emptiness inside.",
-    "Drugs are not the problem, they're what we use to solve the problem.",
-    "Addiction is not a choice, but recovery is.",
-  ];
+   useEffect(() => {
+     const fetchQuote = async () => {
+       try {
+         const response = await axios.get(
+           "https://api.quotable.io/random?tags=drugs"
+         );
+         const { content } = response.data;
+         setQuote(content);
+       } catch (error) {
+         console.error("Error fetching quote:", error);
+       }
+     };
 
-  const generateRandomQuote = () => {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[randomIndex];
-  };
+     const intervalId = setInterval(fetchQuote, 10000); // Fetch a new quote every 10 seconds
 
-  // Effect hook to update the quote at regular intervals
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const randomQuote = generateRandomQuote();
-      setQuote(randomQuote);
-    }, 1000); // 10 seconds
+     return () => clearInterval(intervalId);
+   }, []);
 
-    // Clean up function to clear the interval
-    return () => clearInterval(intervalId);
-  }, []); 
 
   return (
     <View style={styles.container}>
