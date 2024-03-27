@@ -1,13 +1,16 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const ConnectAndThrive = () => {
+  const navigation = useNavigation();
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.heroSection}>
         <Image
-          source={require("../images/friends-laughing.jpg")} 
+          source={require("../images/friends-laughing.jpg")}
           style={styles.heroImage}
         />
         <Text style={styles.heroTitle}>
@@ -65,7 +68,9 @@ const ConnectAndThrive = () => {
             </Text>
           </View>
         </View>
-        <TouchableOpacity style={styles.actionButton}>
+        <TouchableOpacity
+          style={styles.actionButton}
+          onPress={() => navigation.navigate("SupportTreatment")}>
           <Text style={styles.actionButtonText}>Find Your Support Group</Text>
           <MaterialCommunityIcons
             name="chevron-right"

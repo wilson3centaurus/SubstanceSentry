@@ -21,6 +21,7 @@ const HomeScreen = () => {
       setQuote(localQuotes[randomIndex]);
     };
 
+    fetchQuote();
     const intervalId = setInterval(fetchQuote, 10000); // Fetch a new quote every 10 seconds
 
     return () => clearInterval(intervalId);

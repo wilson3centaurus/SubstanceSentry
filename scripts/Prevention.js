@@ -53,7 +53,7 @@ const Prevention = () => {
     <View style={styles.container}>
       <View style={styles.banner}>
         <Image
-          source={require("./images/benjamin-voros-phIFdC6lA4E-unsplash.jpg")}
+          source={require("../images/benjamin-voros-phIFdC6lA4E-unsplash.jpg")}
           style={styles.bannerImage}
           blurRadius={5}
         />
