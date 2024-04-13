@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { View, Text, Image, StyleSheet, Animated } from "react-native";
-import backgroundImage from "../images/img (4).jpg";
+import backgroundImage from "../images/background.jpg";
 import logoImage from "../images/logo.jpg";
 
 const LoadingScreen = ({ navigation }) => {
