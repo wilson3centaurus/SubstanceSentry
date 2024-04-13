@@ -7,7 +7,7 @@ const InformationScreen_Signs = () => {
     <View style={styles.container}>
       <View style={styles.banner}>
         <Image
-          source={require("../images/signs.png")}
+          source={require("../images/signs.jpg")}
           style={styles.bannerImage}
         />
         <Text style={styles.appName}>Drug Abuse Signs</Text>

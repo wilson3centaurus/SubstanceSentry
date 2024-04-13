@@ -1,5 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const LearnAndEmpower = () => {
@@ -7,14 +14,14 @@ const LearnAndEmpower = () => {
     {
       title: "The Unexpected Journey of Addiction: A Memoir",
       author: "Gabrielle Kazan",
-      imageUrl: require("../images/book2.png"), // Replace with your image path
+      imageUrl: require("../images/book-2.jpg"),
       description:
         "A powerful and inspiring memoir that chronicles the author's journey through addiction and recovery.",
     },
     {
       title: "Breaking the Chains of Addiction: A Holistic Approach",
       author: "Dr. David Jones",
-      imageUrl: require("../images/book1.png"), // Replace with your image path
+      imageUrl: require("../images/book-1.jpg"),
       description:
         "This book explores the physical, emotional, and social aspects of addiction, offering a comprehensive guide to recovery.",
     },

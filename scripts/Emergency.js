@@ -44,7 +44,7 @@ const Emergency = () => {
     <View style={styles.emergencyContainer}>
       <View style={styles.heroSection}>
         <Image
-          source={require("../images/emergency.png")}
+          source={require("../images/police.jpg")}
           style={styles.heroImage}
         />
         <Text style={styles.heroTitle}>In Case of Emergency</Text>

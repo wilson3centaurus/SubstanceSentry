@@ -9,7 +9,7 @@ const InformationScreen_Effects = () => {
     <View style={styles.container}>
       <View style={styles.banner}>
         <Image
-          source={require("../images/effects.png")} // Replace with your banner image
+          source={require("../images/effects.jpg")} // Replace with your banner image
           style={styles.bannerImage}
         />
         <Text style={styles.appName}>Drug Abuse Effects</Text>

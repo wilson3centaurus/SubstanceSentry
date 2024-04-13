@@ -23,7 +23,7 @@ const InformationScreen = () => {
           onPress={() => navigation.navigate("InformationScreen_Drugs")}
         >
           <Image
-            source={require("../images/drugs-icon.png")}
+            source={require("../images/drugs-icon.jpg")}
             style={{width: "12%", height: "60%"}}
           />
           <Text style={styles.cardText}>Drug and Substance abuse</Text>
