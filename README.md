@@ -36,15 +36,15 @@ Substance Sentry is a mobile application aimed at providing resources and assist
    npm start
 
 ## Screenshots
-<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/f4d151fd-3891-4cd6-88d9-13b2fd201988" alt="Screenshot 2024-04-13 110721" width="200">
-<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/5e9223f8-45f5-4e5b-851a-99201dc04114" alt="Screenshot 2024-04-13 105716" width="200">
-<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/84948917-0257-49c7-9ccc-0fb2c9c5ad51" alt="Screenshot 2024-04-13 105758" width="200">
-<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/bdceffd3-5412-4bd2-a232-28916e538b39" alt="Screenshot 2024-04-13 105924" width="300">
-<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/a60a0b03-9ca3-4362-8c29-4aed178abcad" alt="Screenshot 2024-04-13 105941" width="300">
-<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/9e36dbb0-be82-41b5-879a-cf97571becf3" alt="Screenshot 2024-04-13 110017" width="300">
-<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/c9366136-2b8e-4373-ad27-18b86b303a98" alt="Screenshot 2024-04-13 110045" width="300">
-<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/b72c4813-cb86-4ffc-991f-6d63fbec69e6" alt="Screenshot 2024-04-13 110100" width="300">
-<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/23bcd9cf-6e18-4e3e-bb68-c909796fc8d4" alt="Screenshot 2024-04-13 110245" width="300">
+<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/f4d151fd-3891-4cd6-88d9-13b2fd201988" alt="Screenshot 2024-04-13 110721" width="250">
+<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/5e9223f8-45f5-4e5b-851a-99201dc04114" alt="Screenshot 2024-04-13 105716" width="250">
+<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/84948917-0257-49c7-9ccc-0fb2c9c5ad51" alt="Screenshot 2024-04-13 105758" width="250">
+<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/bdceffd3-5412-4bd2-a232-28916e538b39" alt="Screenshot 2024-04-13 105924" width="250">
+<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/a60a0b03-9ca3-4362-8c29-4aed178abcad" alt="Screenshot 2024-04-13 105941" width="250">
+<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/9e36dbb0-be82-41b5-879a-cf97571becf3" alt="Screenshot 2024-04-13 110017" width="250">
+<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/c9366136-2b8e-4373-ad27-18b86b303a98" alt="Screenshot 2024-04-13 110045" width="250">
+<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/b72c4813-cb86-4ffc-991f-6d63fbec69e6" alt="Screenshot 2024-04-13 110100" width="250">
+<img src="https://github.com/wilson3centaurus/SubstanceSentry/assets/107620180/23bcd9cf-6e18-4e3e-bb68-c909796fc8d4" alt="Screenshot 2024-04-13 110245" width="250">
 
 ## Contributing
 
